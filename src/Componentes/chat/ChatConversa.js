@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
-
 import {Alert, Badge} from 'reactstrap'
+import {connect} from 'react-redux'
 
 class ChatConversa extends Component {
+
    render() {
        return (
            <div className='chat-conversa'> 
+             {JSON.stringify(this.props)}
                 <Badge color='primary'>
                     você disse:
                 </Badge>
@@ -44,4 +46,10 @@ class ChatConversa extends Component {
 
 }
 
-export default ChatConversa
+const mapStateToProps = (state) => {
+    return {
+        mensagens: state.chat.mensagens
+    }
+}
+
+export default connect(mapStateToProps, null) (ChatConversa)

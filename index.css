@@ -1,0 +1,49 @@
+body {
+  font-family: sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+.Header {
+  grid-area: Header;
+  background: #647ec7;
+  text-align: center;
+  color: aliceblue;
+}
+
+.Home {
+  grid-area: Home;
+  background-color: white;
+
+}
+
+.Chatbot {
+  grid-area: Chatbot;
+  background-color:#f1f1f1;
+  height: calc(100vh - 170px);
+}
+
+.Footer {
+  grid-area: Footer;
+  text-align: center;
+  background: #ddd;
+  height: 60px;
+  width: 100%;
+  padding: 5px;
+  bottom: 0;
+  position: absolute;
+}
+
+.conteudo {
+  display: grid;
+  grid-template-areas: 
+  'Header Header Header Header Header'
+  'Home Home Home Home Chatbot'
+  'Footer Footer Footer Footer Footer'
+}
+
+
